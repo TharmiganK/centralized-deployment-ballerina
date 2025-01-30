@@ -1,0 +1,26 @@
+[package]
+org = "tharmigan"
+name = "consolidator"
+version = "0.1.0"
+distribution = "2201.10.3"
+
+[build-options]
+observabilityIncluded = true
+
+[[dependency]]
+org = "tharmigan"
+name = "service1"
+version = "0.1.0"
+repository = "local"
+
+[[dependency]]
+org = "tharmigan"
+name = "service2"
+version = "0.1.0"
+repository = "local"
+
+[[dependency]]
+org = "tharmigan"
+name = "service3"
+version = "0.1.0"
+repository = "local"
