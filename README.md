@@ -56,13 +56,13 @@ The following is a sample configuration which changes the port to `8080`, HTTP v
 enable SSL.
 
 ```toml
-[tharmigank.http]
+[tharmigan.http]
 defaultListenerPort = 8080
 
-[tharmigank.http.defaultListenerConfig]
+[tharmigan.http.defaultListenerConfig]
 httpVersion = "1.1"
 
-[tharmigank.http.defaultListenerConfig.secureSocket.key]
+[tharmigan.http.defaultListenerConfig.secureSocket.key]
 path = "resources/certs/ballerinaKeystore.p12"
 password = "ballerina"
 ```
