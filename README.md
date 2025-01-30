@@ -52,7 +52,7 @@ This repository contains the source code for the Ballerina services that are use
 
 Use the `Config.toml` file to configure the HTTP endpoint of the consolidator service.
 
-The following is a sample configuration which changes the port to `8080`, HTTP version to `1.1.` and
+The following is a sample configuration which changes the port to `8080`, HTTP version to `1.1` and
 enable SSL.
 
 ```toml
