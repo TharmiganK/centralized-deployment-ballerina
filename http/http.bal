@@ -29,12 +29,9 @@ public configurable http:ListenerConfiguration defaultListenerConfig = {};
 # + return - The default HTTP listener or an error if the listener creation fails.
 public isolated function getDefaultListener() returns http:Listener|http:ListenerError {
     lock {
-        http:Listener? tempListener = defaultListener;
-        if tempListener is http:Listener {
-            return tempListener;
+        if defaultListener is () {
+            defaultListener = check new (defaultListenerPort, defaultListenerConfig);
         }
-        http:Listener 'listener = check new http:Listener(defaultListenerPort, defaultListenerConfig);
-        defaultListener = 'listener;
-        return 'listener;
+        return checkpanic defaultListener.ensureType();
     }
 }
